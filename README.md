@@ -81,7 +81,8 @@ cd f:\projects\rahat_tigerit
 # Setup backend
 cd backend
 python -m venv venv
-venv\Scripts\activate  # On Windows
+venv\Scripts\activate      # Windows (PowerShell/CMD)
+source venv/Scripts/activate  # Windows (Git Bash)
 pip install -r requirements.txt
 
 # Setup frontend (already done)
@@ -168,7 +169,7 @@ NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET_SELFIE=nid_selfie
 
 ```bash
 cd backend
-venv\Scripts\activate
+# PowerShell/CMD: venv\Scripts\activate OR Git Bash: source venv/Scripts/activate
 
 # Run migrations (NeonDB)
 python manage.py migrate
@@ -183,7 +184,7 @@ python manage.py createsuperuser
 
 ```bash
 cd backend
-venv\Scripts\activate
+# PowerShell/CMD: venv\Scripts\activate OR Git Bash: source venv/Scripts/activate
 python manage.py runserver
 ```
 
@@ -402,7 +403,7 @@ rahat_tigerit/
 ```bash
 # Activate virtual environment
 cd backend
-venv\Scripts\activate
+# PowerShell/CMD: venv\Scripts\activate OR Git Bash: source venv/Scripts/activate
 
 # Run server
 python manage.py runserver
